@@ -1,0 +1,42 @@
+Voting Application :-
+
+WHAT :-
+A functionality where user can give votes to the given set of candidates.
+
+-Models
+-Routes
+
+1. User sign in/ sign up.
+2. See the list of candidates.
+3. Vote one of the candidates.
+4. There is a route which shows the list of the candidates and their live vote count data.
+5. User data must contain their one unique government id proof named : aadhar card number.
+6. There should be one admin who can maintain the table of candidates and he can't able to vote.
+7. Users can change their password.
+8. User can login only with their number and password.
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+ROUTES PLANNING
+
+1. User Authenication :-
+    /signup : POST - Create a new user account.
+    /login : POST - Log In an existing user.
+
+2. Voting :-
+    /candidates : GET - Get the list of candidates.
+    /votes/:candidateID - POST - Vote for a specific candidate.
+
+3. Vote Counts :-
+    /vote/counts : GET - Get the list of candidates stored by thier vote counts.
+
+4. User Profile :-
+    /profile : GET - Get the user's profile information.
+    /profile/password : PUT - Change the user's password.
+
+5. Admin Candidate Management :-
+    /candiadtes : POST - Create a new candidate.
+    /candidates/:candidateID: : PUT - Update and existing candidate.
+    /candidates/:candidatesID : DELETE - Delete a candidate from a list. 
