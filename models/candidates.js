@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const brcypt = require("brcypt");
+const bcrypt = require("bcrypt");
 
 const candidateSchema = new mongoose.Schema({
   name: {
@@ -7,7 +7,7 @@ const candidateSchema = new mongoose.Schema({
     required: true,
   },
   party: {
-    typr: String,
+    type: String, // Fixed typo
     required: true,
   },
   age: {
@@ -23,7 +23,7 @@ const candidateSchema = new mongoose.Schema({
       },
       votedAt: {
         type: Date,
-        default: Date.now(),
+        default: Date.now, // Fixed default value
       },
     },
   ],
@@ -33,5 +33,5 @@ const candidateSchema = new mongoose.Schema({
   },
 });
 
-const candidate = new mongoose.model("candidateModel", candidateSchema);
-module.exports = candidate;
+const Candidate = mongoose.model("Candidate", candidateSchema); // Capitalized model name
+module.exports = Candidate;

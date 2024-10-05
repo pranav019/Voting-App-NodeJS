@@ -40,3 +40,7 @@ ROUTES PLANNING
     /candiadtes : POST - Create a new candidate.
     /candidates/:candidateID: : PUT - Update and existing candidate.
     /candidates/:candidatesID : DELETE - Delete a candidate from a list. 
+
+
+Admin Details :-
+- password : password123
